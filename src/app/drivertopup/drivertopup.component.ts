@@ -129,10 +129,7 @@ export class DrivertopupComponent implements OnInit {
 
 	editDriver(taxiData) {
 		this.Driver.getTaxiDetails(taxiData.id).subscribe((res: any) => {
-			console.log('Driver >>> ', res);
 			this.user = res.data;
-			console.log('Driversss', this.user);
-			console.log(this.user);
 			this.edited = true;
 			this.add = false;
 		}, err => {
@@ -166,7 +163,6 @@ export class DrivertopupComponent implements OnInit {
 			'supplierId': this.supplierId,
 			'total': 0,
 		};
-		console.log(parameters);
 		this.eventsService.broadcast('loader:show');
 		this.Driver.topup(parameters).subscribe(res => {
 		

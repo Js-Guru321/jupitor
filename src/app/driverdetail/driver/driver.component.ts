@@ -119,7 +119,7 @@ export class DriverComponent implements OnInit {
 		this.registerDriverForm.patchValue({
 			website: localStorage.getItem('website')
 		});
-		this.registerDriverForm.controls["website"].disable();
+		this.registerDriverForm.controls["website"].enable();
 		this.sidebar.show();
 		this.mapsAPILoader.load().then(
 			() => {

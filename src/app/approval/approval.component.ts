@@ -104,7 +104,6 @@ export class ApprovalComponent implements OnInit {
 		this.eventsService.broadcast('loader:show');
 		this.searchService.taxiApproves(this.supplierId, this.userId).subscribe(response => {
 			this.eventsService.broadcast('loader:hide');
-			console.log(response);
 
 			this.output = response;
 			this.outputdata = this.output.data;

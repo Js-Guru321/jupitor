@@ -11,6 +11,7 @@
                                   <th>Driver Status</th>
                                   <th>Phone Number</th>
                                   <th>Car Type</th>
+                                  <th>Amount</th>
                                   <th>Actions</th>
                               </tr>
                               <tr *ngFor="let taxi of myTaxis">
@@ -18,6 +19,7 @@
                                   <td>{{taxi.driverStatus}}</td>
                                   <td>{{taxi.phoneNumber}}</td>
                                   <td>{{taxi.cartype}}</td>
+                                  <td>{{taxi.amount}}</td>
                                   <td>
                                       <button (click)="editDriver(taxi)" type="button" class="btn btn-info">Top UP</button>&nbsp;
                                   </td>
