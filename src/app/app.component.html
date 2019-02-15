@@ -3,7 +3,6 @@
         <img src="/assets/img/logonewwhite.png" width="180" />
     </a>
     <button class="navbar-toggler" type="button" (click)="isCollapsed = !isCollapsed">
-
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent" [collapse]="isCollapsed">
@@ -54,6 +53,10 @@
                 <li>
                     <a (click)="switchLanguage('it')" style="color: white">
                         <img src="../assets/img/flag/italy-flag-icon.png" alt="" class="lang_image">Italian</a>
+                </li>
+                <li>
+                    <a (click)="switchLanguage('sp')" style="color: white">
+                        <img src="../assets/img/flag/spainsh-flag-icon.png" alt="" class="lang_image">Spainsh</a>
                 </li>
             </ul>
         </ul>

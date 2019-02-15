@@ -86,6 +86,7 @@ export class AppComponent implements OnInit {
 			case 'gr': this.imagePath = `${this.path}germany-flag-icon.png`; break;
 			case 'fr': this.imagePath = `${this.path}france-flag-icon.png`; break;
 			case 'it': this.imagePath = `${this.path}italy-flag-icon.png`; break;
+			case 'sp': this.imagePath = `${this.path}spainsh-flag-icon.png`; break;
 			default: break;
 		}
 		this.translate.use(language);
