@@ -31,6 +31,7 @@ export class DriverService {
 	}
 
 	getTaxiDetails(taxiId) {
+		console.log('taxi/v1/details/' + taxiId);
 		return this.api.get('taxi/v1/details/' + taxiId);
 	}
 

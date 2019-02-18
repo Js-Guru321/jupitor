@@ -22,7 +22,9 @@
       </div>
     </div>
   </form>
- 
+  <div class="row" *ngIf="!show_data" [style.justifyContent]="'center'">
+    No taxi available!
+  </div>
   <div class="row search-area container" *ngIf="show_data">
 
     <tabset>

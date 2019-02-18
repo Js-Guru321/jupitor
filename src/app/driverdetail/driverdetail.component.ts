@@ -86,6 +86,7 @@ export class DriverdetailComponent implements OnInit {
 	) {
 		this.userId = localStorage.getItem('userId');
 		this.supplierId = localStorage.getItem('supplierId');
+		console.log("userId:"+ this.userId + "supplierId:"+ this.supplierId);
 		// this.id = this.supplierId;
    		this.getMyTaxis();
 	}
@@ -96,6 +97,7 @@ export class DriverdetailComponent implements OnInit {
 	getMyTaxis() {
 		this.eventsService.broadcast('loader:show');
 		this.searchService.taxiPositionData(this.supplierId, this.userId).subscribe((res: any) => {
+			console.log(res);
 			this.myTaxis = res.data;
 			this.myTaxis = this.myTaxis;
 			localStorage.setItem('myTaxis', JSON.stringify(this.myTaxis));
@@ -103,6 +105,7 @@ export class DriverdetailComponent implements OnInit {
 		}, err => {
 			this.eventsService.broadcast('loader:hide');
 		});
+		console.log(this.taxiArray);
 	}
 
 	addDriver() {
@@ -120,14 +123,14 @@ export class DriverdetailComponent implements OnInit {
 
 	editDriver(taxiData) {
 		this.Driver.getTaxiDetails(taxiData.id).subscribe((res: any) => {
-			console.log('Driver >>> ', res);
+			// console.log('Driver >>> ', res);
 			this.user = res.data;
-			console.log('Driversss', this.user);
-			console.log(this.user);
+			// console.log('Driversss', this.user);
+			// console.log(this.user);
 			this.edited = true;
 			this.add = false;
 		}, err => {
-			console.log(err);
+			// console.log(err);
 		});
 	}
 
@@ -147,6 +150,7 @@ export class DriverdetailComponent implements OnInit {
 	}
 
 	addUpdateDriver(type) {
+		// console.log(this.user.phoneNumber);
 		const parameters = {
 		  	'address': this.user.address,
 			'carType': this.user.carType,
