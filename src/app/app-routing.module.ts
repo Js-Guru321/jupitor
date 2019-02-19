@@ -1,6 +1,5 @@
 import { NgModule, ViewChild } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { DriverComponent } from './driverdetail/driver/driver.component';
@@ -56,7 +55,10 @@ const routes: Routes = [
 		path: 'approval',
 		component: ApprovalComponent
 	},
-	{ path: 'companyname', component: CompanynameComponent },
+	{ 
+		path: 'companyname', 
+		component: CompanynameComponent 
+	},
 	{
 		path: 'login',
 		component: LoginComponent

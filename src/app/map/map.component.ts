@@ -124,7 +124,7 @@ export class MapComponent implements OnInit {
 	}
 
 	ngOnInit() {
-		console.log(this.role);
+		// console.log(this.role);
 		if(this.role == null)
 			this.router.navigate(['login']);
 		this.sidebar.show();
@@ -169,10 +169,10 @@ export class MapComponent implements OnInit {
 				for (i = 0; i < this.taxiArray.length; i++) {
                         
                     if (data.id !== this.taxiArray[i].driverId) {
-						console.log('2.Unavailable', data.id);
+						// console.log('2.Unavailable', data.id);
    
                     } else  {
-                        console.log('1.Unavailable', data.id);
+                        // console.log('1.Unavailable', data.id);
                     }
                 
                     }
@@ -191,7 +191,7 @@ export class MapComponent implements OnInit {
 							let latVal = parseFloat(arr[0]);
 							e.lat = latVal + lat;
 							if (idx === 0) {
-								console.log(e.lat);
+								// console.log(e.lat);
 							}
 							let lngVal = parseFloat(arr[1]);
 							e.lng = lngVal + lng;
@@ -216,22 +216,22 @@ export class MapComponent implements OnInit {
 					for (i = 0; i < this.taxiArray.length; i++) {
                         
 						if (e.id == this.taxiArray[i].driverId) {
-							console.log('Available id', e.id);
+							// console.log('Available id', e.id);
 							if ( e.id = false ){
-								console.log('Online data', this.taxiArray.length);
+								// console.log('Online data', this.taxiArray.length);
 								e.lat = parseFloat(e.LOCATION.split(',')[0]);
 						e.lng = parseFloat(e.LOCATION.split(',')[1]);
 						
-								console.log('latitude longitutde', e.LOCATION);
-								console.log('Itemsres - lat', e.lat);
-						console.log('Itemsres - lng', e.lng);
+								// console.log('latitude longitutde', e.LOCATION);
+								// console.log('Itemsres - lat', e.lat);
+						// console.log('Itemsres - lng', e.lng);
 							} else {
-								console.log('Offline data', this.taxiArray.length);
-								console.log('latitude longitutde', e.LOCATION);
+								// console.log('Offline data', this.taxiArray.length);
+								// console.log('latitude longitutde', e.LOCATION);
 							}
 	   
 						} else  {
-							console.log('1.Unavailable', e.id);
+							// console.log('1.Unavailable', e.id);
 						}
 					
 						}
@@ -249,20 +249,20 @@ export class MapComponent implements OnInit {
 	}
 	adds(id) {
 			// let item1 = taxiArray.find(i => i.id === 1);
-		console.log('array value', this.taxiArray);
-				 console.log('Taxiid Value...', id);
+		// console.log('array value', this.taxiArray);
+				//  console.log('Taxiid Value...', id);
 				 id = id;
 				 let i;
 				 for (i = 0; i < this.taxiArray.length; i++) {
 					let entry = this.taxiArray[i];
-					console.log('Entry value', entry);
+					// console.log('Entry value', entry);
 					if ( id === this.taxiArray[i].id) {
 						this.taxi.name = this.taxiArray[i].name;
 						this.taxi.driverStatus = this.taxiArray[i].driverStatus;
 						this.taxi.phoneNumber = this.taxiArray[i].phoneNumber;
 						this.taxi.cartype = this.taxiArray[i].cartype;
 
-						console.log('Objechhhht id', this.taxiArray[i].name);
+						// console.log('Objechhhht id', this.taxiArray[i].name);
 						return true;
 					}
 					// Do something with entry
@@ -307,14 +307,14 @@ export class MapComponent implements OnInit {
 					});
 				}
 
-				console.log('Pie Object ==-', obj);
+				// console.log('Pie Object ==-', obj);
 				this.types = obj;
 				this.states = state;
 				this.Taxi = this.types.Taxi;
 				this.driverStatus = this.states.WAITING;
 				this.offDutyDriver = this.states.STOP;
-				 console.log('TAXIpp', this.types.Taxi);
-				 console.log('WAITING :::::: ====', this.states.WAITING);
+				//  console.log('TAXIpp', this.types.Taxi);
+				//  console.log('WAITING :::::: ====', this.states.WAITING);
 				
 				 
 				
