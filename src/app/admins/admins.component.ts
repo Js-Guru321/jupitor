@@ -2,6 +2,7 @@ import { Component, OnInit, ViewChild, ElementRef, NgZone } from '@angular/core'
 import { SidebarService } from '../sidebar.service';
 import { MapsAPILoader, LatLngLiteral } from '@agm/core';
 import { } from 'googlemaps';
+
 import { SearchService } from '../search/search.service';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { EventsService } from '../core/services/events.service';
