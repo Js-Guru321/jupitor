@@ -41,6 +41,7 @@ import { DriverdetailComponent } from './driverdetail/driverdetail.component';
 import { DrivertopupComponent } from './drivertopup/drivertopup.component';
 import { MapComponent } from './map/map.component';
 import { AdminlistComponent } from './adminlist/adminlist.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 export function createTranslateLoader(http: HttpClient) {
 	return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -94,7 +95,8 @@ export function createTranslateLoader(http: HttpClient) {
 		DriverdetailComponent,
 		DrivertopupComponent,
 		AdminlistComponent,
-		MapComponent
+		MapComponent,
+		PageNotFoundComponent
 	],
 
 	providers: [

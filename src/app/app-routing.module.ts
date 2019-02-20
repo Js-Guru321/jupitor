@@ -21,6 +21,8 @@ import { DriverdetailComponent } from './driverdetail/driverdetail.component';
 import { DrivertopupComponent } from './drivertopup/drivertopup.component';
 import { MapComponent } from './map/map.component';
 import { AdminlistComponent } from './adminlist/adminlist.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+
 
 const routes: Routes = [
 	{
@@ -114,7 +116,8 @@ const routes: Routes = [
 		component: SearchDetailComponent
 	},
 	{
-		path: '**', redirectTo: 'search'
+		path: '**', 
+		component: PageNotFoundComponent
 	}
 ];
 
